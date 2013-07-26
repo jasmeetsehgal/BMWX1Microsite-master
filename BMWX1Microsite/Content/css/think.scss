@@ -1,0 +1,905 @@
+#wrap #container #page-fullcircle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    #x1-large-think {
+        left: 1400px;
+        top: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        z-index: -1;
+    }
+
+    .internal-page {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        &.pre-active {
+            visibility: hidden;
+            opacity: 0;
+            display: block;
+        }
+    }
+
+    .circle-container {
+        background: url(../img/FullCircle_bg.png) left top no-repeat;
+        width: 530px;
+        height: 423px;
+        position: absolute;
+        left: 265px;
+        top: 190px;
+        z-index: 11;
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        //visibility: hidden;
+        opacity: 1;
+        z-index: 100;
+
+        h4 {
+            font-size: 20px;
+            color: #0972ba;
+            text-align: center;
+            margin: 15px 0 15px;
+        }
+
+
+        .circle {
+            background: url(../img/fullcircle_bace_shadow.png) bottom center no-repeat;
+            position: relative;
+            width: 317px;
+            height: 317px;
+            padding-bottom: 15px;
+            display: none;
+
+            h5 {
+                color: #fff;
+                margin: 45px 0 10px 10px;
+                font-size: 21px;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 25px;
+                font-weight: bold;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#555555')";
+                filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#555555');
+                //filter: dropshadow(color=#555555, offx=2, offy=2);
+                text-shadow: 2px 2px 2px #555;
+                position: absolute;
+                left: 82px;
+                top: 0;
+                text-align: center;
+
+                a {
+                    color: #fff;
+                }
+
+                &.left {
+                    padding-top: 100px;
+                    margin-left: 0;
+                }
+
+                &.right {
+                    padding-top: 100px;
+                    margin-left: 80px;
+                    color: $blue;
+
+                    a {
+                        color: $blue;
+                    }
+                }
+            }
+
+            .hover-img {
+                background: url(../img/FullCircle_hover.png) left top no-repeat;
+                position: absolute;
+                font-size: 12px;
+                display: none;
+                color: #fff;
+            }
+
+            .txt {
+                position: absolute;
+                color: #fff;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .left {
+                top: 0;
+                left: 0;
+                width: 159px;
+                padding-top: 148px;
+
+                &.active {
+                    .hover-img {
+                        display: block;
+                        background-position: right bottom;
+                        width: 165px;
+                        height: 140px;
+                        left: -14px;
+                        top: 42px;
+                        padding-top: 92px;
+                    }
+                }
+            }
+
+            .right {
+                top: 0;
+                right: 0;
+                width: 140px;
+                padding-top: 148px;
+
+                &.active {
+                    .hover-img {
+                        display: block;
+                        background-position: left -328px;
+                        width: 165px;
+                        height: 155px;
+                        right: -14px;
+                        top: 42px;
+                        padding-top: 77px;
+                    }
+                }
+            }
+
+            .top {
+                top: 0;
+                left: 0;
+                width: 317px;
+                color: #878787;
+                padding-top: 30px;
+
+                &.active {
+                    .hover-img {
+                        display: block;
+                        background-position: left -164px;
+                        width: 232px;
+                        height: 139px;
+                        left: 44px;
+                        top: -14px;
+                        padding-top: 25px;
+                    }
+                }
+            }
+
+            .bottom {
+                bottom: 0;
+                left: 0;
+                width: 317px;
+                padding-bottom: 35px;
+                color: #787777;
+
+                &.active {
+                    .hover-img {
+                        display: block;
+                        background-position: left top;
+                        width: 232px;
+                        height: 114px;
+                        left: 43px;
+                        bottom: 1px;
+                        padding-top: 50px;
+                    }
+                }
+            }
+
+            &.active {
+                display: block;
+            }
+
+            &#choice {
+                .right {
+                    text-shadow: 1px 1px 3px #555555;
+                }
+            }
+        }
+
+        .icon {
+            background: url('../img/full-circle-icon-sprite.png') no-repeat top left;
+            margin-bottom: 10px;
+            width: 80px;
+            margin: 0 auto 10px auto;
+
+            &.guaranteed {
+                height: 62px;
+                background-position: left -100px;
+                margin-left: 25px;
+            }
+
+            &.contract {
+                height: 50px;
+            }
+
+            &.kilometers {
+                height: 40px;
+                background-position: left -55px;
+            }
+
+            &.repayments {
+                height: 48px;
+                background-position: left -165px;
+            }
+
+            &.return {
+                height: 46px;
+                background-position: -160px -180px;
+            }
+
+            &.trade {
+                height: 71px;
+                background-position: -160px -50px;
+            }
+
+            &.refinance {
+                height: 54px;
+                background-position: -160px -122px;
+            }
+
+            &.keep {
+                height: 48px;
+                background-position: -160px top;
+            }
+        }
+
+        .hover-img {
+            .guaranteed {
+                background-position: -80px -100px;
+            }
+
+            .contract {
+                background-position: -75px top;
+            }
+
+            .kilometers {
+                background-position: -75px -55px;
+            }
+
+            .repayments {
+                background-position: -80px -165px;
+            }
+
+            .return {
+                background-position: -240px -180px;
+            }
+
+            .trade {
+                background-position: -240px -50px;
+            }
+
+            .refinance {
+                background-position: -242px -122px;
+            }
+
+            .keep {
+                background-position: -240px top;
+            }
+        }
+
+        #today {
+            .left {
+                padding-top: 100px;
+                width: 130px;
+
+                .hover-img {
+                    padding-top: 62px;
+                    padding-right: 30px;
+                    width: 135px;
+                    height: 170px;
+                }
+            }
+
+            .right {
+                padding-top: 125px;
+            }
+        }
+
+        #benefits {
+            .car {
+                position: absolute;
+                left: 10px;
+                top: 125px;
+            }
+
+            .hover-img {
+                display: none !important;
+            }
+        }
+
+        #tomorrow {
+            .left {
+                padding-top: 130px;
+                width: 130px;
+
+                .hover-img {
+                    padding-top: 82px;
+                    padding-right: 30px;
+                    width: 135px;
+                    height: 150px;
+                }
+            }
+
+            .right {
+                padding-top: 120px;
+
+                &.active {
+                    .hover-img {
+                        right: -24px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .top {
+                padding-top: 20px;
+            }
+
+            .bottom {
+                &.active {
+                    .hover-img {
+                        padding-top: 60px;
+                        height: 104px;
+                    }
+                }
+            }
+        }
+
+        #benefits {
+            .left,
+            .right {
+                .hover-img {
+                    padding-top: 103px;
+                    height: 129px;
+                }
+            }
+        }
+    }
+
+
+    #full-circle {
+        width: 317px;
+        height: 317px;
+        margin: 0 auto;
+        position: relative;
+
+        .imageMaps {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+
+            a {
+                //outline:none !important;
+                //border: none !important;
+            }
+
+            img {
+                width: 317px;
+                height: 317px;
+            }
+
+            map {
+                outline: 0 none;
+            }
+
+            map area:active,
+            map area:visited,
+            map area:hover {
+                outline: 0 none;
+            }
+
+            #mapT {
+                outline: 0 none;
+
+                area {
+                    outline: 0 none;
+                }
+            }
+        }
+
+        .navBtn {
+            background: url(../img/next_back.png) left top no-repeat;
+            width: 28px;
+            height: 51px;
+            position: absolute;
+            top: 133px;
+
+            &.next {
+                right: -85px;
+                background-position: right top;
+            }
+
+            &.back {
+                left: -85px;
+                display: none;
+            }
+        }
+
+        .navi {
+            margin: 30px 0 0 90px;
+
+            a {
+                background: url(../img/navi-triangles.png) center bottom no-repeat;
+                width: 20px;
+                height: 10px;
+                float: left;
+                margin: 0 3px;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: -20px;
+                    color: $lm-grey;
+                }
+
+                &.active,
+                &:hover {
+                    background-position: center top;
+
+                    span {
+                        color: $light-blue;
+                        cursor: pointer;
+                    }
+                }
+
+                &.tod {
+                    span {
+                        left: -10px;
+                    }
+                }
+
+                &.tom {
+                    margin-left: 90px;
+
+                    span {
+                        left: -30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .txt-container {
+        background: url(../img/grey_text_bg_cut.png) right top no-repeat;
+        width: 401px;
+        height: 423px;
+        float: left;
+        position: absolute;
+        left: 652px;
+        top: 190px;
+        z-index: 10;
+        opacity: 1;
+        //visibility: hidden;
+        .top-img {
+            padding: 35px 0 0 100px;
+        }
+
+        .fullcircle-logo {
+            margin-left: -20px;
+            margin-top: 180px;
+        }
+
+        .txtdata {
+            color: #fff;
+            margin-left: 145px;
+            padding-top: 12px;
+            width: 250px;
+
+            h2 {
+                margin: 45px 0 10px 10px;
+                font-size: 21px;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 50px;
+                width: 195px;
+                line-height: 25px;
+                font-weight: bold;
+                text-shadow: 2px 2px 2px #555;
+                filter: dropshadow(color=#555555, offx=2, offy=2);
+            }
+
+            .txtitem {
+                //display:none;
+                float: left;
+                min-height: 150px;
+                margin-left: 0;
+
+                &.upper {
+                    margin-left: -100px;
+
+                    .text {
+                        margin-left: 45px;
+                    }
+                }
+
+                &.active {
+                    display: block;
+                }
+
+                &.inactive {
+                    display: none;
+                }
+            }
+
+            #txt-benefits {
+                h2 {
+                    width: 210px;
+                }
+            }
+        }
+
+        .text {
+            padding-right: 20px;
+            width: 230px;
+            line-height: 14px;
+            height: 130px;
+            font-size: 12px;
+            margin-left: 0;
+        }
+
+        #move-more-information {
+            background: url("../img/more-info-arrow.png") no-repeat scroll right top transparent;
+            color: #333333;
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            height: 25px;
+            line-height: 25px;
+            margin: 0 0 10px 0px;
+            position: relative;
+            left: -95px;
+            padding-right: 22px;
+            text-align: left;
+
+            &.benefits {
+                left: -65px;
+            }
+        }
+    }
+
+    #txt-today,
+    #txt-tomorrow,
+    #txt-benefits,
+    #txt-choice {
+        h2 {
+            margin-top: 10px;
+        }
+
+        .text {
+            height: 140px;
+        }
+    }
+
+    #txt-contract {
+        .text {
+            width: 200px;
+        }
+    }
+
+    #txt-guaranteed {
+        .text {
+            width: 220px;
+        }
+    }
+
+    #txt-refinance {
+        .text {
+            width: 210px;
+        }
+    }
+
+    #txt-keep {
+        .text {
+            width: 180px;
+        }
+    }
+
+    #txt-return {
+        .text {
+            width: 190px;
+        }
+    }
+
+    #txt-benefits {
+        .text {
+            height: 85px;
+        }
+    }
+
+    #txt-RSA {
+        .text {
+            //width: 200px;
+        }
+
+        .think-more-information {
+            left: 15px;
+            top: 370px;
+        }
+    }
+
+    #txt-BSI {
+        .think-more-information {
+            left: 5px;
+            top: 365px;
+        }
+    }
+
+    .line, .line_content {
+        text-align: left;
+    }
+
+    #circle-buttons {
+        position: absolute;
+        left: 1070px;
+        top: 562px;
+        width: 76px;
+        height: 51px;
+        opacity: 1;
+        visibility: hidden;
+        z-index: 15;
+
+        .btn {
+            background: url("../img/right-left-btns.png") no-repeat scroll left top transparent;
+            display: block;
+            height: 51px;
+            position: absolute;
+            text-indent: -9999px;
+            top: 0;
+            width: 28px;
+
+            &.prev {
+                background-position: left -102px;
+
+                &:hover {
+                    background-position: left -153px;
+                }
+            }
+
+            &.next {
+                background-position: right -102px;
+
+                &:hover {
+                    background-position: right -153px;
+                }
+            }
+        }
+    }
+
+    #circle-slogan {
+        left: 655px;
+        top: 630px;
+        font-size: 15px;
+        color: $mid-grey;
+        width: 400px;
+        position: absolute;
+        text-align: right;
+        visibility: hidden;
+    }
+
+    #circle-nav,
+    #circle-cta {
+        position: absolute;
+        top: 190px;
+        left: 60px;
+        opacity: 1;
+        visibility: hidden;
+        z-index: 99;
+
+        .nav {
+            min-width: 200px;
+            text-align: right;
+            height: 37px;
+            line-height: 37px;
+            background: url('../img/circle-nav-buttons.png') no-repeat bottom right;
+            display: block;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: $dark-grey;
+            position: relative;
+            padding-right: 72px;
+            //filter: inherit;
+            &.active,
+            &:hover {
+                background-position: top right;
+            }
+
+            &.no-hover {
+                cursor: default;
+            }
+        }
+
+        .nav0 {
+            right: -20px;
+
+            &.active {
+                right: -40px;
+            }
+        }
+
+        .nav1 {
+            right: 0;
+            top: -6px;
+
+            &.active {
+                right: -20px;
+            }
+        }
+
+        .nav2 {
+            right: 20px;
+            top: -12px;
+
+            &.active {
+                right: 0px;
+            }
+        }
+
+        .nav3 {
+            right: 40px;
+            top: -18px;
+
+            &.active {
+                right: 20px;
+            }
+        }
+    }
+
+    #circle-cta {
+        top: 500px;
+        left: 45px;
+        opacity: 1;
+        z-index: 101;
+
+        .nav {
+            font-size: 12px;
+            height: 26px;
+            line-height: 26px;
+            background: url('../img/think-cta-btn-bg.png') no-repeat bottom right;
+            padding-right: 60px;
+            filter: inherit;
+
+            &.active,
+            &:hover {
+                background-position: top right;
+            }
+        }
+
+        .nav0 {
+            right: 14px;
+            top: 0;
+
+            &.active {
+                right: 0;
+            }
+        }
+
+        .nav1 {
+            right: 0;
+            top: -4px;
+
+            &.active {
+                right: -14px;
+            }
+        }
+
+        .nav2 {
+            right: -14px;
+            top: -8px;
+
+            &.active {
+                right: -28px;
+            }
+        }
+
+        .nav3 {
+            right: -28px;
+            top: -12px;
+
+            &.active {
+                right: -42px;
+            }
+        }
+    }
+
+    #CircleIntro {
+        h2 {
+            width: 320px;
+            margin: 85px 0 20px -10px;
+        }
+
+        .text {
+            margin-left: 20px;
+        }
+    }
+
+    #BmwServiceInclusive,
+    #BmwRoadside {
+		.circle-container {
+			z-index: 9;
+		}
+        //visibility:hidden;
+        .circle {
+            margin: 110px 0 0 70px;
+            background: none;
+        }
+
+        .person-img {
+            position: absolute;
+            right: 165px;
+            top: 30px;
+        }
+
+        .top-img {
+            min-height: 160px;
+            padding-top: 0;
+        }
+
+        .txtitem {
+            display: block !important;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    #BmwRoadside {
+        //visibility:hidden;
+        .circle {
+            margin: 0;
+        }
+    }
+
+    #BmwServiceInclusive {
+        h2 {
+            height: 60px;
+            width: 300px;
+            position: relative;
+            top: -20px;
+        }
+		.text {
+			position: relative;
+			top: -30px;
+		}
+    }
+
+    #BmwRoadside {
+        h2 {
+            height: 50px;
+        }
+    }
+}
+.ie7, .ie8 {
+    #wrap {
+        #container {
+			#circle-cta {
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                filter: alpha(opacity=100);
+			}
+			/*#circle-nav .nav:hover span,
+			#circle-nav .nav.active span,
+			#circle-cta .nav:hover span {
+                visibility: visible;
+			}
+			#circle-nav .nav span,
+			#circle-cta .nav span {
+				visibility: hidden;
+			}*/
+        }
+    }
+}
+
+
+
+
+
+ 

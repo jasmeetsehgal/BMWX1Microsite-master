@@ -1,0 +1,93 @@
+﻿/* =============================================================================
+   Additional UI
+   ========================================================================== */
+
+/* overlays */
+.overlay {
+  display: none;
+  z-index: 10000;
+  width: 600px;
+  height: 660px;
+  padding: 18px;
+  display: none;
+ }
+
+  .overlay .close {
+    cursor: pointer;
+    height: 26px;
+    width: 27px;
+    position: absolute;
+    right: 10px;
+    text-decoration: underline;
+    top: 20px;
+    background: url(/Content/img/overlay-close.gif) no-repeat top left;
+    }
+
+/* select box style for dropdown replacment */
+.select_wrapper {
+	position: relative;
+	float: left;
+}
+.selectbox {
+	background: #3b3b82 url(/Content/img/) no-repeat scroll right center;
+	border: 1px solid #9393ba;
+    color: #9090c4;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: left;
+	text-decoration: none;
+	height: 34px;
+	width: 158px;
+	padding: 0 30px 0 10px;
+	float: left;
+	line-height: 34px;
+	outline: none;
+	font-size: 12px;
+	
+}
+.disabled .selectbox {
+	cursor: default;
+	color: #ccc;
+	border: 1px solid #444;	
+}
+.dd_wrapper {
+	font-size: 14px;
+	position: absolute;
+	background: #2c2c78;
+	border: 1px solid #565693;
+	top: 37px;
+}
+.dd_wrapper_top, .dd_wrapper_bottom {
+	height: 1px;
+	background: #2c2c78;
+	border-left: 1px solid #565693;
+	border-right: 1px solid #565693;
+	border-top: 1px solid #565693;
+	position: absolute;
+}
+
+.dd_list_container {
+	overflow: auto;
+}
+.dd_wrapper_bottom {
+	border-bottom: 1px solid #00a9e0;
+	border-top: none;
+}
+.dd_list_container ul {
+	padding: 0px 0 0 5px;
+	list-style: none inside;
+	margin: 0;
+    color: #fff;
+}
+#content .dd_list_container ul li {
+	padding: 6px 7px;
+	font-size: 12px;
+	line-height: 1.2em;
+	cursor: pointer;
+}
+.dd_list_container .dd_current {
+	background: #3b3b82;
+}
+.dd_list_container .dd_selected {
+	background: #3b3b82;
+}

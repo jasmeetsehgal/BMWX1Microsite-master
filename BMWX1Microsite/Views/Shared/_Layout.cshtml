@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	@*Mobile viewport optimized: j.mp/bplateviewport *@
+	<meta name="viewport" content="width=1276">
+	<title>@ViewBag.Title</title>
+	<link href="@Links.Content.css.main_css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35478968-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+</script>
+    <script src="@Links.Content.js.vendor.modernizr_2_6_2_min_js"></script>
+
+</head>
+<body>
+	<div id="wrap">
+		<div id="container">
+			@RenderBody()    
+		</div>
+	</div>
+	
+	@* JavaScript at the bottom for fast page loading *@
+
+	@* Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline *@
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="@Links.Content.js.vendor.jquery_1_9_0_min_js"><\/script>')</script>
+    <script src="@Links.Content.js.vendor.greensock.TweenMax_min_js"></script>
+    <script src="@Links.Content.js.vendor.greensock.TimelineMax_min_js"></script>
+    <script src="@Links.Content.js.vendor.jquery_mousewheel_js"></script>
+    <script src="@Links.Content.js.vendor.jquery_bacon_js"></script>
+    <script src="@Links.Content.js.plugins_js"></script>
+	<script src="@Links.Content.js.as_utils_js"></script>
+	<script src="@Links.Content.js.as_main_js"></script>
+  
+	@* end scripts *@
+
+	
+</body>
+</html>
